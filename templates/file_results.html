@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <link rel="stylesheet" href={{url_for("static",filename="Home.css")}} media="screen">
+    <link rel="stylesheet" href={{url_for("static",filename="nicepage.css")}} media="screen">
+
+<style>
+
+
+table, th, td {
+  border: 0.5px solid black;
+}
+</style>
+  <meta charset="UTF-8">
+  <title>Review Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href={{url_for("static",filename="Home.css")}} media="screen">
+    <link rel="stylesheet" href={{url_for("static",filename="nicepage.css")}} media="screen">
+
+<!--    <link rel="stylesheet" href={{url_for("static",filename="style.css")}}>-->
+
+
+    <script src="{{url_for('static', filename='jquery.js')}}"></script>
+<!--    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>-->
+
+    <script src="{{url_for('static', filename='nicepage.js')}}"></script>
+<!--    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>-->
+    <meta name="generator" content="Nicepage 3.25.0, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
+
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+
+</head>
+
+<body class="u-body"><header class="u-header u-image u-shading u-header" id="sec-26b1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" data-image-width="500" data-image-height="322">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="header"><h2> Review Analysis Result</h2></div>
+      </div></header>
+  <div class="table-users">
+<div class="u-clearfix u-sheet u-sheet-1">
+   <table cellspacing="0">
+      <tr>
+         <th width="700"><h6><b>Reviews</b></h6></th>
+          <th width="100"><h6><b>Analysis</b></h6></th>
+
+      </tr>
+         {% for review in reviews %}
+      <tr>
+          <td>{{review['Reviews']}}</td>
+         <td>{{review['Analysis']}}</td>
+       {% endfor %}
+   </table>
+
+
+    <div>
+        <h3>Positives: {{per_pos}}</h3>
+    </div>
+    <div>
+        <h3>Neutrals: {{per_neu}}</h3>
+    </div>
+    <div>
+        <h3>negatives: {{per_neg}}</h3>
+    </div>
+
+
+  </div>
+        </div>
+
+</body>
+</html>

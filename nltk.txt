@@ -1,0 +1,7 @@
+wordnet
+pros_cons
+reuters
+stopwords
+punkt
+WordNetLemmatizer
+word_tokenize

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+
+{% extends 'base.html' %}
+
+{% block head %}
+
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+
+
+
+    <title>Home</title>
+<!--    <link rel="stylesheet" href="nicepage.css" media="screen">-->
+    <link rel="stylesheet" href={{url_for("static",filename="Home.css")}} media="screen">
+    <link rel="stylesheet" href={{url_for("static",filename="nicepage.css")}} media="screen">
+
+<!--    <link rel="stylesheet" href={{url_for("static",filename="style.css")}}>-->
+
+
+    <script src="{{url_for('static', filename='jquery.js')}}"></script>
+<!--    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>-->
+
+    <script src="{{url_for('static', filename='nicepage.js')}}"></script>
+<!--    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>-->
+    <meta name="generator" content="Nicepage 3.25.0, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
+
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body"><header class="u-header u-image u-shading u-header" id="sec-26b1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" data-image-width="500" data-image-height="322"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <img class="u-image u-image-default u-preserve-proportions u-image-1" src="static/images/github.png" alt="" data-image-width="225" data-image-height="225">
+        <a href="https://github.com/amisoneji" target="_blank" class="u-border-1 u-border-active-palette-1-dark-1 u-border-hover-white u-border-white u-btn u-button-style u-none u-text-hover-palette-2-base u-text-white u-btn-1"> https://github.com/amisoneji</a>
+      </div></header>
+    <section class="u-align-center u-clearfix u-image u-shading u-section-1" id="sec-1939" data-image-width="1600" data-image-height="1068">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-form u-form-1">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h3 style="text-align: center">Product Reviews Analysis</h3>
+
+    <div class="form">
+        <form action="/scrap" method="POST" >
+            <input type="text" name="content" id="content" placeholder="Enter Customer Review to Predict"  class="u-border-3 u-border-grey-30 u-input u-input-rectangle u-white u-input-1" required="">
+            <input type="submit" value="PREDICT" class="u-border-none u-btn u-btn-submit u-button-style u-hover-palette-1-light-2 u-palette-1-base u-btn-1" >
+        </form>
+    </div>
+</div>
+
+<h4>
+    Result will appeared here...<br>
+              <div id="result_div" >
+                   <p style="color:red;"> {% include 'results.html' %} </p>
+              </div>
+</h4>
+
+<!-- <FORM>-->
+        <h3> --OR-- </h3>
+
+<div class="fileupload">
+    <div class="form">
+        <form action="/uploadCSV" method="POST" enctype="multipart/form-data" >
+            <input type="file" name="fileupload"  placeholder="Upload CSV file containing bulk customer reviews"  class="u-border-3 u-border-grey-30 u-input u-input-rectangle u-white u-input-1" required="">
+            <input type="submit" value="Upload & Predict" class="u-border-none u-btn u-btn-submit u-button-style u-hover-palette-1-light-2 u-palette-1-base u-btn-1" >
+        </form>
+    </div>
+</div>
+          <h6> File to be uploaded must be in CSV format.</h6>
+
+
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-image u-shading u-section-2" id="sec-a9ea" data-image-width="1600" data-image-height="1068">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <blockquote class="u-align-justify u-text u-text-1"> "This project is case study which is centered around predicting customer satisfaction with a&nbsp; product which can be deduced after predicting the product rating a user would rate after&nbsp;he makes a purchase. To predict customer satisfaction based on reviews written by customer, ML model will predict sentiments about the product"</blockquote>
+
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-571e"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">by Ami Soneji&nbsp;</p>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Website Templates</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="https://nicepage.com/" target="_blank">
+        <span>Website Builder Software</span>
+      </a>. 
+    </section>
+  </body>
+{% endblock %}
+</html>
