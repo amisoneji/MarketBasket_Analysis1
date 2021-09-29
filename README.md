@@ -8,6 +8,26 @@ Most customers do not post a review rating or any comment after purchasing a pro
 
 # Deployment Links
 
-Heroku: **https://revanalysis.herokuapp.com/uploadCSV**
+Heroku: **https://revanalysis.herokuapp.com/**
 
-# UserInterface
+# UserInterface:
+![image](https://user-images.githubusercontent.com/71078788/135309628-20cc3e1f-de5a-4628-bc24-978c6619513f.png)
+
+# Technologies Used:
+1. Python 
+2. Sklearn
+3. NLTK
+4. Flask
+5. Html
+6. Css
+7. Pandas, Numpy 
+8. Cassandra 
+9. Heroku
+ 
+# HLD , LLD & WireFrame:
+LINK: https://drive.google.com/drive/folders/1kS-5fFHoxLVXlf3NRnhj2CmWOhCoRsCM?usp=sharing
+
+# Help Me To Improve
+
+Hello Reader if you find any bug please consider raising issue I will address them asap.
+
